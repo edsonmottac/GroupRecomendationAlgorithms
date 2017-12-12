@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mate82app.AggregationTechnicsController">
+    <children>
+      <SplitPane dividerPositions="0.12527472527472527, 0.8769230769230769" orientation="VERTICAL" prefHeight="457.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="86.0" prefWidth="538.0">
+               <children>
+                  <TextField fx:id="txthroas" layoutX="14.0" layoutY="25.0" prefHeight="25.0" prefWidth="87.0" text="2" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Ultimas x horas" />
+                  <Button fx:id="btGetDataBD" layoutX="110.0" layoutY="25.0" mnemonicParsing="false" onAction="#btGetDataBD_Click" prefHeight="25.0" prefWidth="79.0" text="Carregar" />
+                  <Button fx:id="btPopulateBD" layoutX="445.0" layoutY="25.0" mnemonicParsing="false" onAction="#btPopulateBD_Click" prefHeight="25.0" prefWidth="79.0" text="Load Mysql" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableview" layoutX="31.0" layoutY="28.0" prefHeight="343.0" prefWidth="538.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="C1" prefWidth="75.0" text="NOME" />
+                        <TableColumn fx:id="C2" prefWidth="55.0" text="T22" />
+                      <TableColumn fx:id="C3" prefWidth="64.0" text="T23" />
+                        <TableColumn fx:id="C4" prefWidth="65.0" text="T24" />
+                        <TableColumn fx:id="C5" prefWidth="74.0" text="T25" />
+                        <TableColumn fx:id="C6" prefWidth="73.0" text="T26" />
+                        <TableColumn fx:id="C7" prefWidth="69.0" text="T27" />
+                        <TableColumn fx:id="C8" prefWidth="62.0" text="T28" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="127.0" prefWidth="538.0">
+               <children>
+                  <ComboBox fx:id="cmbAlgorithms" layoutX="300.0" layoutY="14.0" prefHeight="25.0" prefWidth="175.0" />
+                  <Button fx:id="btRun" layoutX="483.0" layoutY="14.0" mnemonicParsing="false" onAction="#btRun_Click" text="Run!" />
+                  <Label fx:id="lblResult" layoutX="93.0" layoutY="9.0" prefHeight="33.0" prefWidth="79.0" text="0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblResult1" layoutX="14.0" layoutY="9.0" prefHeight="33.0" prefWidth="79.0" text="Result:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+    </children>
+</AnchorPane>
